@@ -26,5 +26,10 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
   <br> Berikut adalah hasil run soal 5 yang menggunakan completer
   
   ![Hasil Run Soal 5](soal5.gif)
+</p>
 
+### Soal 6
+<p>Perbedaan paling besar ada di fungsi calculate, sekarang terdapat catch dan akan dieksekusi completer.completeError yang menyelesaikan future dengan error. <br> Dalam Elevated Button juga terdapat try catch yang akan menampilkan pesan error saat terjadi. <br>Untuk hasil run, saya mendapat hasil yang sama seperti praktikum sebelumnya yaitu menampilkan angka 42: 
+
+ ![Hasil Run Soal 6](soal6.gif)
 </p>
