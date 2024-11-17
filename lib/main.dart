@@ -39,6 +39,29 @@ class _FuturePageState extends State<FuturePage> {
     Uri url = Uri.https(authority, path);
     return http.get(url);
   }
+Future<int> returnOneAsync() async {
+  await Future.delayed(const Duration(seconds: 3));
+  return 1;
+}
+
+Future<int> returnTwoAsync() async {
+  await Future.delayed(const Duration(seconds: 3));
+  return 2;
+}
+Future<int> returnThreeAsync() async {
+  await Future.delayed(const Duration(seconds: 3));
+  return 3;
+}
+Future count()async{
+  int total = 0;
+  total += await returnOneAsync();
+  total += await returnTwoAsync();
+  total += await returnThreeAsync();
+  setState(() {
+    result = total.toString();
+  });
+
+}
 
   String result = '';
   @override
@@ -53,19 +76,11 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             ElevatedButton(
                 onPressed: () {
-                  setState(() {
-                    getData().then((value) {
-                      result = value.body.toString().substring(0, 450);
-                      setState(() {});
-                    }).catchError((_) {
-                      result = 'An Error occured:(';
-                      setState(() {});
-                    });
-                  });
+               count();
                 },
                 child: const Text('GO!')),
             const Spacer(),
-            Text(result),
+            Text(result,style: const TextStyle(fontSize: 24),),
             const Spacer(),
             const CircularProgressIndicator(),
             const Spacer(),
