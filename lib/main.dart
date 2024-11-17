@@ -39,29 +39,44 @@ class _FuturePageState extends State<FuturePage> {
     Uri url = Uri.https(authority, path);
     return http.get(url);
   }
-Future<int> returnOneAsync() async {
-  await Future.delayed(const Duration(seconds: 3));
-  return 1;
-}
 
-Future<int> returnTwoAsync() async {
-  await Future.delayed(const Duration(seconds: 3));
-  return 2;
-}
-Future<int> returnThreeAsync() async {
-  await Future.delayed(const Duration(seconds: 3));
-  return 3;
-}
-Future count()async{
-  int total = 0;
-  total += await returnOneAsync();
-  total += await returnTwoAsync();
-  total += await returnThreeAsync();
-  setState(() {
-    result = total.toString();
-  });
+  Future<int> returnOneAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 1;
+  }
 
-}
+  Future<int> returnTwoAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 2;
+  }
+
+  Future<int> returnThreeAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 3;
+  }
+
+  Future count() async {
+    int total = 0;
+    total += await returnOneAsync();
+    total += await returnTwoAsync();
+    total += await returnThreeAsync();
+    setState(() {
+      result = total.toString();
+    });
+  }
+
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+  }
 
   String result = '';
   @override
@@ -76,11 +91,18 @@ Future count()async{
             const Spacer(),
             ElevatedButton(
                 onPressed: () {
-               count();
+                  getNumber().then((value) {
+                    setState(() {
+                      result = value.toString();
+                    });
+                  });
                 },
                 child: const Text('GO!')),
             const Spacer(),
-            Text(result,style: const TextStyle(fontSize: 24),),
+            Text(
+              result,
+              style: const TextStyle(fontSize: 24),
+            ),
             const Spacer(),
             const CircularProgressIndicator(),
             const Spacer(),

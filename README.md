@@ -18,3 +18,13 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 
 ![Hasil Run Soal 4](soal4.gif)
 
+### Soal 5
+<p>Maksud dari langkah 2 adalah: <br>
+- Pembuatan Completer dengan variable late yang berarti variable ini bisa diisi nanti 
+  <br> - Pembuatan function get number, dimana function ini akan menjalankan sebuah asnyc operation calculate()
+  <br> - PAda function calculate() akan terjadi delay selama 5 detik, setelah itu akan return sebuah value bernilai 42
+  <br> Berikut adalah hasil run soal 5 yang menggunakan completer
+  
+  ![Hasil Run Soal 5](soal5.gif)
+
+</p>
