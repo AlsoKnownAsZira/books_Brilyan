@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -82,6 +83,23 @@ class _FuturePageState extends State<FuturePage> {
    }
   }
 
+   void returnFG(){
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (int i in value) {
+        total += i;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+   }
+
   String result = '';
   @override
   Widget build(BuildContext context) {
@@ -95,13 +113,7 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             ElevatedButton(
                 onPressed: () {
-                  getNumber().then((value) {
-                    setState(() {
-                      result = value.toString();
-                    });
-                  }).catchError((e){
-                    result = 'An error occured:(';
-                  });
+                  returnFG();
                 },
                 child: const Text('GO!')),
             const Spacer(),

@@ -33,3 +33,8 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 
  ![Hasil Run Soal 6](soal6.gif)
 </p>
+
+### Soal 7
+<p>Akan dijalankan Future Group dengan delay 3 detik, tidak seperti future biasa yang saling tunggu, Future Group akan menjalankan secara bersamaan sehingga hasilnya lebih cepat.</p>
+
+ ![Hasil Run Soal 7](soal7.gif)
