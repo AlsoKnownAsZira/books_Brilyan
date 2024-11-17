@@ -8,4 +8,5 @@
 - catchError digunakan untuk menghandle error di operasi asnyc, pada konteks ini catchError akan menangkap error apa yang terjadi saat kiya mengambil string tadi, jika ada error maka akan ditampilkan result yang telah kita tentukan
 <br><br>
 Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
-![Soal 3](soal3.gif)
+
+![Hasil Run Soal 3](soal3.gif)
