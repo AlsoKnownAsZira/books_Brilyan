@@ -59,3 +59,10 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
  <p>Berikut adalah hasil run soal 12 dengan menambahkan delay loading selama 3 detik sebelum menampilkan lokasi </p>
 
   ![Hasil RUn soal 12](soal12.gif)
+
+### Soal 13
+<p>Saat di run tidak ada perbedaan UI yang ditampilkan, karena kita hanya mengubah proses building nya tanpa merubah UI</p>
+
+![Hasil Run Soal 13](soal13.gif)
+
+### Soal 14
