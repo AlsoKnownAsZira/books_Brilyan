@@ -47,3 +47,15 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
  <p>Berikut adalah hasil run soal nomor 9 </p>
 
  ![Hasil RUn soal 9](soal9.gif)
+
+ ### Soal 10
+ <p>Terdapat sebuah perbedaan yakni digunakan try catch, saat error didapatkan(catch) error msg akan diparse ke string dan ditampilkan di layar, lalu ada finally yaitu setelah error catching berhasil ia akan dijalankan.</p>
+
+ ### Soal 11
+ <p>Sudah saya tambahkan nama panggilan pada appbar Location Screen</p>
+
+ ### Soal 12 
+ <p>Saat di run di browser, tidak akan tampil apapun. Bahkan tidak ada permintaan akses permission untuk lokasi device, hal ini karena browser tidak memiliki akses lokasi seperti halnya emulator atau device yang telah kita atur di AndroidManifest.xml</p>
+ <p>Berikut adalah hasil run soal 12 dengan menambahkan delay loading selama 3 detik sebelum menampilkan lokasi </p>
+
+  ![Hasil RUn soal 12](soal12.gif)

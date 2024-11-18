@@ -1,3 +1,4 @@
+import 'package:books_zira/geolocation.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FuturePage(),
+      home: const LocationScreen(),
     );
   }
 }
@@ -104,9 +105,17 @@ class _FuturePageState extends State<FuturePage> {
       });
     });
   }
-  Future returnError() async{
-    await Future.delayed(const Duration(seconds: 2));
-    throw Exception('Something Terrible happened:(');
+
+  Future returnError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    }finally{
+      print('Complete');
+    }
   }
 
   String result = '';
