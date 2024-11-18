@@ -1,4 +1,5 @@
 import 'package:books_zira/geolocation.dart';
+import 'package:books_zira/navigation_dialog.dart';
 import 'package:books_zira/navigation_first.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const NavigationFirst(),
+      home: const NavigationDialogScreen(),
     );
   }
 }

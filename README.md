@@ -78,3 +78,8 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 
 
 ![Hasil run soal 16](soal16.gif)
+
+### Soal 17
+ <p>Saat diklik tombol, warna background akan berubah sesuai pilihan. KKarena saat dijalankan Navigator.pop sama seperti soal sebelumnya akan dikembalikan warna baru, dan UI akan di update melalui setState()</p>
+
+![Hasil run soal 17](soal17.gif)
