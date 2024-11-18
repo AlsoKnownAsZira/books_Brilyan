@@ -69,3 +69,12 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 <p>Perbedaan UI hanya terdapat pada hasil akhir, jika terdapat error maka akan menampilkan pesan 'Something terrible happened!'</p>
 
 ![Hasil run soal 14](soal14.gif)
+
+### SOal 15
+<p>Sudah saya lakukan penggantian warna tema dan penambahan nama pada judul</p>
+
+### Soal 16
+<p>Saat tombol di layar kedua ditekan, layar kedua akan di pop dan otomatis akan kembali ke layar pertama. Saat itu juga layar pertama menerima warna yang kita pilih pada layar kedua. Dan diperbarui warna backgroun ddengan setState() karena saat Navigator.pop() kita juga mengembalikan data ke Navigator.push() untuk rebuild warna UI</p>
+
+
+![Hasil run soal 16](soal16.gif)
