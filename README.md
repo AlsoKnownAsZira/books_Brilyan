@@ -66,3 +66,6 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 ![Hasil Run Soal 13](soal13.gif)
 
 ### Soal 14
+<p>Perbedaan UI hanya terdapat pada hasil akhir, jika terdapat error maka akan menampilkan pesan 'Something terrible happened!'</p>
+
+![Hasil run soal 14](soal14.gif)
