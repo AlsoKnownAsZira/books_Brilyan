@@ -38,3 +38,12 @@ Berikut adalah hasil run soal 3 dengan menggunakan Google books API<br>
 <p>Akan dijalankan Future Group dengan delay 3 detik, tidak seperti future biasa yang saling tunggu, Future Group akan menjalankan secara bersamaan sehingga hasilnya lebih cepat.</p>
 
  ![Hasil Run Soal 7](soal7.gif)
+
+ ### Soal 8
+ <p>Perbedaan paling mencolok adalah, saat menggunakan variabel final futures akan terlihat lebih simpel untuk dibaca, namun FutureGroup memberikan kita kontrol yang lebih untuk fungsi kita, bisa digunakan untuk skenario kompleks dimana kita perlu mengatur fungsi secara detail. Untuk menggunakan beberapa future sederhana, bisa disimpan di sebuah variabel saja seperti final futures</p>
+
+ ### Soal 9
+ 
+ <p>Berikut adalah hasil run soal nomor 9 </p>
+
+ ![Hasil RUn soal 9](soal9.gif)
